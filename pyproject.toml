@@ -1,0 +1,35 @@
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#writing-pyproject-toml
+
+[build-system]
+requires = ["hatchling>=1.21.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "exam1"
+dynamic = ["version"]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0 OR MIT"
+authors = [
+  { name="Choi Seondo", email="meteo0718@gmail.com" },
+]
+# https://pypi.org/classifiers/
+classifiers = [ 
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", # https://choosealicense.com/
+    "Operating System :: MacOS",
+    
+]
+dependencies = [
+  "fastapi[all]>=0.109.2",
+  "torch==2.1.2 @ https://download.pytorch.org/whl/cu118",
+  "torchvision==0.16.2 @ https://download.pytorch.org/whl/cu118",
+  "torchaudio==2.1.2 @ https://download.pytorch.org/whl/cu118",
+]
+
+[tool.hatch.version]
+path = "exam1/__version__.py"
+
+[project.urls]
+Homepage = "https://github.com/highfreshness/"
