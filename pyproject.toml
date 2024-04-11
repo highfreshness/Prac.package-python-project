@@ -23,27 +23,6 @@ dependencies = [
   "fastapi[all]>=0.109.2",
 ]
 
-# OPTIONAL
-[project.optional-dependencies]
-# CPU(Python3.9)
-CPU = [
-  "torch==2.1.2 ; platform_machine == 'arm64'",
-  "torchvision==0.16.2 ; platform_machine == 'arm64'",
-  "torchaudio==2.1.2 ; platform_machine == 'arm64'",
-  "torch @ https://download.pytorch.org/whl/cpu/torch-2.1.2%2Bcpu-cp39-cp39-linux_x86_64.whl#sha256=10df25736edb00852eca6041941e99d13502e65773d5c6164372eaaab83d976b ; platform_machine == 'x86_64'",
-  "torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.16.2%2Bcpu-cp39-cp39-linux_x86_64.whl#sha256=39b3c549522bec7ca64e0cd6fbde56ddbc7ebc196f4b402b607d942e4b0a8632 ; platform_machine == 'x86_64'",
-  "torchaudio @ https://download.pytorch.org/whl/cpu/torchaudio-2.1.2%2Bcpu-cp39-cp39-linux_x86_64.whl#sha256=a94e59a4c99007b0d32409b5bdc9fce3fc763a5cecba8dfe88e832503954c20c ; platform_machine == 'x86_64'" 
-]
-# GPU(Python3.9)
-GPU = [
-  "torch @ https://download.pytorch.org/whl/cu118/torch-2.1.2%2Bcu118-cp39-cp39-linux_x86_64.whl#sha256=9a36473dd38eeae4e54b2235d06b92d5e63cedbcc15877eab4a15f152fd90b4a ; platform_machine == 'x86_64'",
-  "torchvision @ https://download.pytorch.org/whl/cu118/torchvision-0.16.2%2Bcu118-cp39-cp39-linux_x86_64.whl#sha256=88999dceabb6652b6ede49509722a29753c9206df09ccaa69754f21b58fbdb63 ; platform_machine == 'x86_64'", 
-  "torchaudio @ https://download.pytorch.org/whl/cu118/torchaudio-2.1.2%2Bcu118-cp39-cp39-linux_x86_64.whl#sha256=8826c91462be0fd214fef2236902e011bc0184a2d677135964e806d332b85450 ; platform_machine == 'x86_64'",
-]
-
-[tool.hatch.metadata] # Required options when using URLs for dependencies
-allow-direct-references = true
-
 [tool.hatch.version]
 path = "exam1/__version__.py"
 
